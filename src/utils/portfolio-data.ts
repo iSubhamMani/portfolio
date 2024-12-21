@@ -29,7 +29,7 @@ export const portfolioData = {
     "Pursuing Bachelor's in Computer Science at The Heritage Institute of Technology, Kolkata.",
     "Web Dev Lead at Google Developers Group On Campus HITK.",
     "2x Hackathon Winner 🏆.",
-    "Off-duty, I explore Earth, burn recipes, and conquer virtual worlds.",
+    "Off-duty, I explore Earth, burn recipes and conquer virtual worlds.",
   ],
   socialLinks: [
     {
