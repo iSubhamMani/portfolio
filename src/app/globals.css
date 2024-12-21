@@ -3,19 +3,203 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-dark: #7034e1;
+  --secondary-dark: #333;
+  --secondary-light: #e3d8f9;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Hide scrollbar for modern browsers */
+html {
+  scrollbar-width: none; /* Firefox */
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* For WebKit-based browsers (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root[class="light"] {
+  background: #f7f7f7;
+}
+
+:root[class="dark"] {
+  background: #18181b;
+}
+
+.nav-btn {
+  padding: 0.2rem 0.5rem;
+  position: relative;
+  color: var(--secondary-dark);
+  background: transparent;
+  border-left: 2px solid var(--primary-dark);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-light);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.nav-btn:hover::before {
+  left: 0;
+}
+
+.nav-btn:hover {
+  color: var(--secondary-dark);
+  transition: color 0.3s ease;
+}
+
+:is(.dark .nav-btn) {
+  color: white;
+  border-left: 2px solid var(--primary-dark);
+}
+
+:is(.dark .nav-btn)::before {
+  background-color: var(--secondary-dark);
+}
+
+:is(.dark .nav-btn):hover {
+  color: white;
+}
+
+.nav-btn-secondary {
+  padding: 0.2rem 0.5rem;
+  position: relative;
+  color: var(--secondary-dark);
+  background: transparent;
+  border-left: 2px solid var(--primary-dark);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav-btn-secondary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-dark);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.nav-btn-secondary:hover::before {
+  left: 0;
+}
+
+.nav-btn-secondary:hover {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+:is(.dark .nav-btn-secondary) {
+  color: white;
+}
+
+.animated-heading {
+  position: relative;
+  color: var(--secondary-dark);
+  background: transparent;
+  border-left: 2px solid var(--primary-dark);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.animated-heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-light);
+  z-index: -1;
+  animation: slideIn 0.6s ease 0.3s forwards;
+}
+
+:is(.dark .animated-heading) {
+  color: white;
+}
+
+:is(.dark .animated-heading)::before {
+  background-color: var(--secondary-dark);
+}
+
+@keyframes slideIn {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes fadeAndPullUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blurAnimation {
+  0% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+
+.fade-pullup {
+  animation: fadeAndPullUp 0.3s ease-out forwards 0.2s,
+    blurAnimation 0.3s ease-out forwards 0.2s;
+  opacity: 0;
+}
+
+.fade-pullup-delayed-1 {
+  animation: fadeAndPullUp 0.3s ease-out forwards 0.4s,
+    blurAnimation 0.3s ease-out forwards 0.4s;
+  opacity: 0;
+}
+
+.fade-pullup-delayed-2 {
+  animation: fadeAndPullUp 0.3s ease-out forwards 0.5s,
+    blurAnimation 0.3s ease-out forwards 0.5s;
+  opacity: 0;
+}
+
+.fade-pullup-delayed-3 {
+  animation: fadeAndPullUp 0.3s ease-out forwards 0.6s,
+    blurAnimation 0.3s ease-out forwards 0.6s;
+  opacity: 0;
+}
+
+.rotate-animation {
+  animation: rotate360 0.3s ease-in-out;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
