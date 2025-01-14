@@ -40,7 +40,7 @@ export default function Home() {
             className="object-cover rounded-full"
             width={180}
             height={180}
-            src={"/profile-photo.jpg"}
+            src={"/profile-photo.png"}
             alt="Subham Mani"
           />
         </div>
