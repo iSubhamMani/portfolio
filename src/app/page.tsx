@@ -74,7 +74,7 @@ export default function Home() {
                 {portfolioData.workExperience[
                   portfolioData.workExperience.length - 1
                 ] !== work && (
-                  <div className="border-b border-secondary_dark pt-2"></div>
+                  <div className="border-b border-gray-400 pt-2"></div>
                 )}
               </div>
             );

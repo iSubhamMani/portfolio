@@ -7,11 +7,14 @@ import {
   FaNodeJs,
   FaReact,
 } from "react-icons/fa";
+import { DiRedis } from "react-icons/di";
 import { FaXTwitter } from "react-icons/fa6";
+import { TbBrandSocketIo } from "react-icons/tb";
 import {
   RiFirebaseFill,
   RiNextjsFill,
   RiTailwindCssFill,
+  RiSupabaseFill,
 } from "react-icons/ri";
 import {
   SiExpress,
@@ -54,6 +57,15 @@ export const portfolioData = {
     },
   ],
   workExperience: [
+    {
+      companyLogo: "/lamarr.jpeg",
+      company: "Lamarr",
+      position: "Frontend Intern",
+      startDate: "Feb 2025",
+      endDate: "March 2025",
+      description:
+        "Developed and enhanced UI, improving user experience and efficiency in managing recruitment workflows. Optimized the shortlisting process and automating scheduling to improve hiring efficiency.",
+    },
     {
       companyLogo: "/wit-dreamin.png",
       company: "Women in Tech Dreamin'",
@@ -132,6 +144,21 @@ export const portfolioData = {
       name: "Docker",
       icon: FaDocker,
       color: "#2496ED",
+    },
+    {
+      name: "Redis",
+      icon: DiRedis,
+      color: "#DC382D",
+    },
+    {
+      name: "Supabase",
+      icon: RiSupabaseFill,
+      color: "#3ECF8E",
+    },
+    {
+      name: "Socket.io",
+      icon: TbBrandSocketIo,
+      color: "#010101",
     },
   ],
   projects: [
