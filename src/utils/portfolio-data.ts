@@ -196,6 +196,14 @@ export const portfolioData = {
       ],
     },
     {
+      imgUrl: "/note-keeper.png",
+      title: "Note Keeper",
+      description: "Query your notes with AI and never forget anything again.",
+      liveLink: "https://notekeeper-psi-two.vercel.app",
+      githubLink: "https://github.com/iSubhamMani/note-keeper",
+      techUsed: ["Next.js", "Supabase", "Pinecone", "Gemini"],
+    },
+    {
       imgUrl: "/med-o-ai.png",
       title: "Med-o-AI",
       description:
